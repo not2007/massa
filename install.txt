@@ -5,12 +5,18 @@ massa ubuntu部署： 
   命令行下载： wget https://not2007.github.io/massa/build-linux_TEST.3.3.zip
   
   解压：sudo apt-get install zip && unzip build-linux_TEST.3.3.zip
+  解压后出现massa文件件
 
 二、启动massa  （用户名ubuntu， 如果不是需要修改配置文件， /etc/supervisor/conf.d/massa.conf）
 
   安装supervisor，支持后端启动：sudo apt-get update && sudo apt-get install supervisor
   配置后端运行文件： wget https://not2007.github.io/massa/supervisor.conf && sudo mv supervisor.conf /etc/supervisor/conf.d/massa.conf
   启动massa-node:  sudo supervisorctl update massa
+  
+  查看运行日志： massa/run.log
+  重启节点：sudo supervisorctl restart massa
+  关闭节点：sudo supervisorctl stop massa 
+  删除自启动：sudo rm /etc/supervisor/conf.d/massa.conf && sudo supervisorctl update massa
 
 三、创建钱包
 
