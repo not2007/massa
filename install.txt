@@ -1,0 +1,22 @@
+massa ubuntu部署： 
+
+一、下载 test 3.3
+  官网下载：https://gitlab.com/massalabs/massa
+  命令行下载： wget https://not2007.github.io/massa/build-linux_TEST.3.3.zip
+  
+  解压：sudo apt-get install zip && unzip build-linux_TEST.3.3.zip
+
+二、启动massa
+
+  安装supervisor，支持后端启动：sudo apt-get update && sudo apt-get install supervisor
+  配置后端运行文件： wget https://not2007.github.io/massa/supervisor.conf && sudo mv supervisor.conf /etc/supervisor/conf.d/massa.conf
+  启动massa-node:  sudo supervisorctl update massa
+
+三、创建钱包
+
+  进入路径：   cd massa/massa-client  
+  运行massa-client:     ./massa-client
+
+四、接水和激活
+  参考链接
+  https://www.nodex.run/thread/7
