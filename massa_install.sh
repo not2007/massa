@@ -39,6 +39,6 @@ tail -n 20 ~/massa/run.log
 
 echo "打开client，创建密钥和地址。。。。。"
 sleep 1
-cd ～/massa/massa-client && ./massa-client
+cd ~/massa/massa-client && ./massa-client
 
 
