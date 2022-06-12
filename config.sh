@@ -1,8 +1,9 @@
 
 IP=$(curl ip.gs)
+echo "IP=$IP"
 
-sudo tee <<EOF >/dev/null ~/massa/massa-node/config/config.toml
-# massa/massa-node/config/config.toml
+tee <<EOF >/dev/null ~/massa/massa-node/config/config.toml
+# ~/massa/massa-node/config/config.toml
 [network]
     routable_ip = "$IP"
     
