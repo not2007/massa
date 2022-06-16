@@ -13,9 +13,6 @@ MASSA_CLIENT_PATH=$(MASSA_PATH)/massa-client
 cd MASSA_CLIENT_PATH
 #
 #echo $(./massa-client wallet_info)
-#Private key: NY3jqxY1SqL9KWG8A2k8Wh2H6kz93HfU2vdU85Lwgzm1qJjYL
-#Public key: 277qGe4nbNgKM5RVQU8YEr2UUmftQGWNHxT6xipZ65xVUzVhqB
-#Address: A18yHQJ6Fzj2sCT7dWXhjLVKENSZQ4TDZU4n3aXjpjvGFrNNbsb
 
 candidate_balance=$(./massa-client wallet_info | grep 'Candidate balance' | awk '{print $3}')
 candidate_rolls=$(./massa-client wallet_info | grep 'Candidate rolls' | awk '{print $3}')
