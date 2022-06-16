@@ -10,7 +10,7 @@ sleep 1
 
 MASSA_CLIENT_PATH=$(MASSA_PATH)/massa-client
 
-cd MASSA_CLIENT_PATH
+cd $MASSA_CLIENT_PATH
 #
 #echo $(./massa-client wallet_info)
 
